@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark: #431844;
+  --color-primary: #a8457b;
+  --color-secondary: #965972;
+  --color-earth: #B4958E;
+  --color-soft: #E6DEE4;
+  --color-text: #FEFEFE;
+
+  @keyframes shine {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background-color: var(--color-dark);
+  color: var(--color-text);
+}

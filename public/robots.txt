@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://solutechia.es/sitemap.xml
