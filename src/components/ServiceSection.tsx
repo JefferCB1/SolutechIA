@@ -52,32 +52,49 @@ const ServiceSection: FC<ServiceSectionProps> = ({ id }) => {
                     </div>
                 </div>
 
-                {/* Right Content: Card Swap Animation */}
-                <div className="h-[500px] md:h-[600px] w-full relative flex items-center justify-center">
+                {/* Right Content: Card Swap Animation - Desktop */}
+                <div className="hidden md:block h-[500px] lg:h-[600px] w-full relative flex items-center justify-center">
                     <CardSwap
                         cardDistance={50}
                         verticalDistance={60}
                         delay={1000}
                         pauseOnHover={true}
-                        width={320}
-                        height={400}
+                        width={340}
+                        height={440}
                         skewAmount={3}
                     >
                         {services.map((service, index) => (
-                            <Card key={index} className={`flex flex-col items-center justify-center p-8 text-center border-t border-l border-white/20 bg-gradient-to-br ${service.gradient} backdrop-blur-2xl shadow-[0_0_40px_rgba(0,0,0,0.5)]`}>
-                                <div className="mb-6 p-6 rounded-full bg-white/5 shadow-inner ring-1 ring-white/10">
+                            <Card key={index} className={`flex flex-col items-center justify-center p-6 lg:p-8 text-center border-t border-l border-white/20 bg-gradient-to-br ${service.gradient} backdrop-blur-2xl shadow-[0_0_40px_rgba(0,0,0,0.5)]`}>
+                                <div className="mb-4 lg:mb-6 p-4 lg:p-6 rounded-full bg-white/5 shadow-inner ring-1 ring-white/10">
                                     {service.icon}
                                 </div>
-                                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                                <p className="text-gray-300 font-medium leading-relaxed">{service.desc}</p>
+                                <h3 className="text-lg lg:text-2xl font-bold text-white mb-2 lg:mb-4">{service.title}</h3>
+                                <p className="text-sm lg:text-base text-gray-300 font-medium leading-relaxed">{service.desc}</p>
 
-                                <div className="absolute bottom-6 w-full px-8 flex justify-between text-xs text-gray-500 uppercase tracking-widest">
+                                <div className="absolute bottom-4 lg:bottom-6 w-full px-6 lg:px-8 flex justify-between text-xs text-gray-500 uppercase tracking-widest">
                                     <span>Solutech IA</span>
                                     <span>0{index + 1}</span>
                                 </div>
                             </Card>
                         ))}
                     </CardSwap>
+                </div>
+
+                {/* Mobile Services List - Simple cards for mobile */}
+                <div className="md:hidden w-full space-y-4">
+                    {services.map((service, index) => (
+                        <div key={index} className={`p-4 rounded-2xl border border-white/10 bg-gradient-to-br ${service.gradient} backdrop-blur-xl shadow-lg`}>
+                            <div className="flex items-center gap-4">
+                                <div className="p-3 rounded-full bg-white/10">
+                                    {service.icon}
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="text-lg font-bold text-white">{service.title}</h3>
+                                    <p className="text-sm text-gray-300">{service.desc}</p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>
