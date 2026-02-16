@@ -304,7 +304,7 @@ const CRMPage: FC = () => {
       {/* Hero Section */}
       <section 
         id="hero"
-        className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20"
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >
@@ -338,7 +338,7 @@ const CRMPage: FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-100 to-white/80">
               Descubre
@@ -354,7 +354,7 @@ const CRMPage: FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-10 max-w-2xl md:max-w-3xl mx-auto"
           >
             El CRM más completo con{' '}
             <span className="text-white font-semibold">Inteligencia Artificial</span> integrada.
@@ -365,7 +365,7 @@ const CRMPage: FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
           >
             <a 
               href="#planes"
@@ -373,11 +373,11 @@ const CRMPage: FC = () => {
                 e.preventDefault();
                 document.getElementById('planes')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="inline-flex bg-gradient-to-r from-primary to-secondary text-white px-10 py-5 rounded-full font-bold text-lg shadow-lg hover:shadow-primary/50 hover:scale-105 transition-all cursor-pointer"
+              className="inline-flex bg-gradient-to-r from-primary to-secondary text-white px-6 sm:px-10 py-3 sm:py-5 rounded-full font-bold text-sm sm:text-lg shadow-lg hover:shadow-primary/50 hover:scale-105 transition-all cursor-pointer"
             >
               <span className="flex items-center gap-2">
                 Ver Planes
-                <ArrowRight size={20} />
+                <ArrowRight size={18} className="sm:w-20" />
               </span>
             </a>
             
@@ -387,7 +387,7 @@ const CRMPage: FC = () => {
                 e.preventDefault();
                 document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="px-10 py-5 rounded-full font-bold text-lg text-white border border-white/20 hover:bg-white/10 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              className="px-6 sm:px-10 py-3 sm:py-5 rounded-full font-bold text-sm sm:text-lg text-white border border-white/20 hover:bg-white/10 transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               Conocer Más
             </a>

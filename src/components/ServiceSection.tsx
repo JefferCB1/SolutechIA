@@ -21,7 +21,7 @@ interface ServiceSectionProps {
 
 const ServiceSection: FC<ServiceSectionProps> = ({ id }) => {
     return (
-        <section id={id} className="py-24 relative overflow-hidden min-h-screen flex flex-col justify-center">
+        <section id={id} className="py-12 sm:py-16 md:py-24 relative overflow-hidden min-h-[80vh] md:min-h-screen flex flex-col justify-center">
             {/* Background Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
                 <div className="absolute top-[20%] left-[10%] w-96 h-96 bg-primary/20 rounded-full blur-[100px] animate-pulse" />
@@ -32,14 +32,14 @@ const ServiceSection: FC<ServiceSectionProps> = ({ id }) => {
 
                 {/* Left Content */}
                 <div className="text-left">
-                    <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 sm:mb-8 leading-tight">
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
                             Nuestro Portafolio
                         </span>
                         <br />
                         <span className="text-white">de Servicios</span>
                     </h2>
-                    <p className="text-xl text-gray-300 max-w-lg mb-12 leading-relaxed">
+                    <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-lg mb-8 sm:mb-12 leading-relaxed">
                         Explora nuestra gama de soluciones automatizadas diseñadas para escalar tu negocio, mejorar la eficiencia y deleitar a tus clientes.
                     </p>
 

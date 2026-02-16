@@ -30,8 +30,8 @@ const Navbar: FC = () => {
             transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
             whileHover={{ scale: 1.02, boxShadow: "0 20px 40px rgba(0,0,0,0.4)", borderColor: "rgba(255,255,255,0.2)" }}
             className={`fixed left-1/2 -translate-x-1/2 z-50 rounded-full transition-all duration-500 ease-out border ${isScrolled
-                ? 'top-4 w-[90%] md:w-[70%] max-w-4xl bg-[#371764]/80 backdrop-blur-2xl border-white/10 shadow-2xl'
-                : 'top-8 w-[95%] md:w-[85%] max-w-6xl bg-[#371764]/40 backdrop-blur-xl border-white/5 shadow-lg'
+                ? 'top-2 sm:top-4 w-[95%] sm:w-[90%] md:w-[70%] max-w-4xl bg-[#371764]/80 backdrop-blur-2xl border-white/10 shadow-2xl'
+                : 'top-4 sm:top-8 w-[95%] sm:w-[90%] md:w-[85%] max-w-6xl bg-[#371764]/40 backdrop-blur-xl border-white/5 shadow-lg'
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,7 +45,7 @@ const Navbar: FC = () => {
                     </div>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center space-x-8">
+                    <div className="hidden md:flex items-center space-x-4 lg:space-x-8">
                         {navLinks.map((link) => (
                             <a
                                 key={link.name}
@@ -57,7 +57,7 @@ const Navbar: FC = () => {
                         ))}
     <a
         href="/#contact"
-        className="bg-primary hover:bg-secondary text-white px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 shadow-lg hover:shadow-primary/50"
+        className="bg-primary hover:bg-secondary text-white px-4 sm:px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 shadow-lg hover:shadow-primary/50 min-h-[44px] flex items-center"
     >
         Cotizar
     </a>

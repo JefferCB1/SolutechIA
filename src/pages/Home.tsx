@@ -50,7 +50,7 @@ const HeroContent: FC = () => {
         <div
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            className="relative z-10 text-center p-8 max-w-5xl mx-auto cursor-default"
+            className="relative z-10 text-center p-4 sm:p-6 md:p-8 max-w-5xl mx-auto cursor-default"
         >
             <motion.div
                 style={{ x: xTitle, y: yTitle }}
@@ -62,7 +62,7 @@ const HeroContent: FC = () => {
                 {/* Ambient Glow behind title */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/20 blur-[100px] rounded-full pointer-events-none" />
 
-                <h1 className="relative text-6xl md:text-8xl font-extrabold mb-6 pb-2 leading-tight tracking-tight">
+                <h1 className="relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold mb-4 sm:mb-6 pb-2 leading-tight tracking-tight">
                     <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-100 to-white/80 filter drop-shadow-lg">
                         Automatización
                     </span>
@@ -110,7 +110,7 @@ const Home: FC = () => {
             <ParticleBackground />
 
             {/* Hero Section */}
-            <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden perspective-1000">
+            <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden perspective-1000">
                 {/* Video Background - Full coverage */}
                 <div className="absolute inset-0 w-full h-full z-0">
                     <video
