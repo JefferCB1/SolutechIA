@@ -53,14 +53,14 @@ const ServiceSection: FC<ServiceSectionProps> = ({ id }) => {
                 </div>
 
                 {/* Right Content: Card Swap Animation */}
-                <div className="h-[600px] w-full relative flex items-center justify-center">
+                <div className="h-[500px] md:h-[600px] w-full relative flex items-center justify-center">
                     <CardSwap
                         cardDistance={50}
                         verticalDistance={60}
                         delay={1000}
                         pauseOnHover={true}
-                        width={380}
-                        height={480}
+                        width={320}
+                        height={400}
                         skewAmount={3}
                     >
                         {services.map((service, index) => (
